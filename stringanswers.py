@@ -71,7 +71,13 @@ def isPalindrome(str):
 # Implementation notes:
 #	-
 def zipper(str1, str2):
-	print("To be implemented")
+	returnString = ""
+	for i in range(max(len(str1), len(str2))):
+		if i < len(str1):
+			returnString = returnString + str1[i]
+		if i < len(str2):
+			returnString = returnString + str2[i]
+	return returnString
 
 #
 # fizzBuzz()
@@ -85,7 +91,15 @@ def zipper(str1, str2):
 #	A string with the characters of str in reverse order
 #
 def fizzBuzz(n):
-	print("FizzBuzz not implemented")
+	for i in range(n):
+		if i % 3 == 0 and i % 5 == 0:
+			print("FizzBuzz")
+		elif i % 3 == 0:
+			print("Fizz")
+		elif i % 5 == 0:
+			print("Buzz")
+		else:
+			print(i)
 
 #
 # reverseString()
@@ -96,5 +110,8 @@ def fizzBuzz(n):
 #	A string with the characters of str in reverse order
 #
 def reverseString(str):
-	print("To be implemented")
+	reversed = ""
+	for c in str:
+		reversed = c + reversed
+	return reversed
 
