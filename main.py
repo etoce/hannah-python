@@ -1,18 +1,17 @@
 import stringproblems
+import stringproblems2
+import stringproblems2test
 import stringanswers
+import stringanswers2
+import tester
 
-moduleToTest = stringproblems
+moduleToTest = stringproblems2
+testModule = stringproblems2test
 
-print(moduleToTest.contains("apple", "p"))
-print(moduleToTest.contains("apple", "x"))
-print(moduleToTest.contains("apple", "A"))
+myTester = tester.Tester(moduleToTest, getattr(testModule, "cases"))
 
-print(moduleToTest.isPalindrome("aardvark"))
-print(moduleToTest.isPalindrome("racecar"))
+#myTester.testMethod("parrot")
+#myTester.testMethod("scrabbleScore")
+#myTester.testMethod("hasDuplicateLetters")
+#myTester.testMethod("collatzSteps")
 
-print(moduleToTest.zipper("apple", "grapefruit"))
-print(moduleToTest.zipper("grapefruit", "apple"))
-
-moduleToTest.fizzBuzz(50)
-
-print(moduleToTest.reverseString("Hello world!"))
