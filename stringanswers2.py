@@ -18,6 +18,24 @@ def parrot(str, n):
 	return retValue
 
 #
+# withoutVowels()
+#	Creates a version of a given string, but without the vowels.
+# Parameters:
+#	str: The string in question, guaranteed to be all lower case letters
+# Return value:
+#	A string similar to str, but with all vowels missing.
+# Implementation notes:
+#	Do not consider W or Y vowels for the purpose of this function.
+def withoutVowels(str):
+	retValue = ""
+	for char in str:
+		if char == "a" or char == "e" or char == "i" or char == "o" or char == "u":
+			retValue += ""
+		else:
+			retValue += char
+	return retValue
+
+#
 # scrabbleScore()
 #	Calculates the score that the given word would receive in the word game
 #	Scrabble (c), disregarding board effects such as Double Word Scores.

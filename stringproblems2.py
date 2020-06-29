@@ -15,6 +15,18 @@ def parrot(str, n):
 	return "To be implemented"
 
 #
+# withoutVowels()
+#	Creates a version of a given string, but without the vowels.
+# Parameters:
+#	str: The string in question
+# Return value:
+#	A string similar to str, but with all vowels missing.
+# Implementation notes:
+#	Do not consider W or Y vowels for the purpose of this function.
+def withoutVowels(str):
+	return "To be implemented"
+
+#
 # scrabbleScore()
 #	Calculates the score that the given word would receive in the word game
 #	Scrabble (c), disregarding board effects such as Double Word Scores.
@@ -87,3 +99,5 @@ def hasDuplicateLetters(str):
 #	and have failed.
 def collatzSteps(n):
 	return "To be implemented"
+
+

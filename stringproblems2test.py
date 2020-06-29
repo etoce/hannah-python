@@ -4,6 +4,14 @@ cases = {
 		(("apple", 3), "appleappleapple"),
 		(("zzzzzzz", 10), "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz")
 	],
+	"withoutVowels": [
+		(("",), ""),
+		(("cry",), "cry"),
+		(("apple",), "ppl"),
+		(("crystal",), "crystl"),
+		(("facetiously",), "fctsly"),
+		(("oea",), "")
+	],
 	"scrabbleScore": [
 		(("",), 0),
 		(("apple",), 9),

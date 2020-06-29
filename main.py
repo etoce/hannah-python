@@ -11,6 +11,7 @@ testModule = stringproblems2test
 myTester = tester.Tester(moduleToTest, getattr(testModule, "cases"))
 
 #myTester.testMethod("parrot")
+#myTester.testMethod("withoutVowels")
 #myTester.testMethod("scrabbleScore")
 #myTester.testMethod("hasDuplicateLetters")
 #myTester.testMethod("collatzSteps")
