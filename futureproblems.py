@@ -32,23 +32,6 @@ def indexOfSubstring(str, potentialSubstring):
 	return "To be implemented"
 
 #
-# isAnagramOf()
-#	Determines if two strings are anagrams of each other. Two strings are
-#	anagrams if they both contain the same characters in the same quantities.
-#  For example, "papel" is an anagram of "apple", while "lapel"
-# 	is not. Note that every string is an anagram of itself according to this
-#	definition.
-# Parameters:
-#	str1: The first string in question
-#	str2: The second string in question
-# Return value:
-#	True, if str1 and str2 are anagrams, or false, if they are not.
-# Implementation notes:
-#	-
-def isAnagramOf(str1, str2):
-	return "To be implemented"
-
-#
 # containsLettersOf()
 #	Determines if a given string contains the letters of another given string
 #	within it, disregarding order. For example, the string "apple" contains the
