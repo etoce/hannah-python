@@ -1,22 +1,23 @@
 import stringproblems
 import stringproblems2
 import stringproblems2test
+import stringproblems3
+import stringproblems3test
 import stringanswers
 import stringanswers2
+import stringanswers3
 import listproblems
 import listanswers
 import listproblemstest
+import sortingproblems
+import sortingproblemstest
+import sortinganswers
 import tester
 
-moduleToTest = listproblems
-testModule = listproblemstest
+moduleToTest = stringanswers3
+testModule = stringproblems3test
 
 myTester = tester.Tester(moduleToTest, getattr(testModule, "cases"))
 
-#myTester.testMethod("is_sorted")
-#myTester.testMethod("largest_number")
-#myTester.testMethod("slice_and_glue")
-#myTester.testMethod("double_characters")
-#myTester.testMethod("erer")
-#myTester.testMethod("is_anagram")
-
+#myTester.testMethod("substring")
+myTester.testMethod("contains_letters")

@@ -1,3 +1,5 @@
+from copy import deepcopy
+
 class Tester:
 	def __init__(self, moduleToTest, cases):
 		self.moduleToTest = moduleToTest
@@ -8,6 +10,13 @@ class Tester:
 			return "\"" + thing + "\""
 		else:
 			return str(thing)
+
+	def formatTupleAsArguments(self, tuple):
+		strTuple = str(tuple).replace("'", "\"")
+		if len(tuple) == 1:
+			return strTuple[0:len(strTuple) - 2] + strTuple[len(strTuple) - 1]
+		else:
+			return strTuple
 	
 	def testMethod(self, methodName):
 		if methodName in self.cases:
@@ -16,15 +25,15 @@ class Tester:
 			failures = 0
 			for testCase in self.cases[methodName]:
 				if hasattr(self.moduleToTest, methodName):
-					#print("Testing " + methodName + str(testCase[0]))
+					input = deepcopy(testCase[0])
 					runs += 1
-					returnValue = getattr(self.moduleToTest, methodName)(*testCase[0])
+					returnValue = getattr(self.moduleToTest, methodName)(*input)
 					if returnValue != testCase[1]:
 						failures += 1
-						print("Test failed: " + methodName + str(testCase[0]) + " returned " + self.format(returnValue) + " instead of the expected " + self.format(testCase[1]))
+						print("Test failed: " + methodName + self.formatTupleAsArguments(testCase[0]) + " returned " + self.format(returnValue) + " instead of the expected " + self.format(testCase[1]))
 					else:
 						successes += 1
-						print("Test passed! " + methodName + str(testCase[0]) + " returned " + str(returnValue) + ", matching the expected value!")
+						print("Test passed! " + methodName + self.formatTupleAsArguments(testCase[0]) + " returned " + self.format(returnValue) + ", matching the expected value!")
 		message = ""
 		if successes == runs:
 			message = "Perfect!"
