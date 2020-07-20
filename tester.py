@@ -34,17 +34,17 @@ class Tester:
 					else:
 						successes += 1
 						print("Test passed! " + methodName + self.formatTupleAsArguments(testCase[0]) + " returned " + self.format(returnValue) + ", matching the expected value!")
-		message = ""
-		if successes == runs:
-			message = "Perfect!"
-		elif successes / runs >= 0.75:
-			message = "Getting close!"
-		elif successes / runs >= 0.5:
-			message = "I guess it could be worse."
-		elif successes / runs > 0:
-			message = "Hey, at least they didn't all fail, right?"
-		else:
-			message = "Aw, it's okay. Just think of all the progress you're about to make!"
-		print("Finished testing " + methodName + "(): " + str(successes) + " of " + str(runs) + " tests passed.")
-		print(message)
+			message = ""
+			if successes == runs:
+				message = "Perfect!"
+			elif successes / runs >= 0.75:
+				message = "Getting close!"
+			elif successes / runs >= 0.5:
+				message = "I guess it could be worse."
+			elif successes / runs > 0:
+				message = "Hey, at least they didn't all fail, right?"
+			else:
+				message = "Aw, it's okay. Just think of all the progress you're about to make!"
+			print("Finished testing " + methodName + "(): " + str(successes) + " of " + str(runs) + " tests passed.")
+			print(message)
 
