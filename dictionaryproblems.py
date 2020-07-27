@@ -29,7 +29,7 @@ print(len(example)) 	# Prints 7
 
 example["do"] = "A deer, an email deer"
 print(example["do"])
-example["do"] = "A deer, an female deer" # Change it back to be nice
+example["do"] = "A deer, a female deer" # Change it back to be nice
 
 # You can also use that syntax to add entries to the dictionary if they don't
 # exist:
