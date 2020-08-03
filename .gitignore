@@ -11,3 +11,8 @@ __pycache__/yahtzeetest.cpython-35.pyc
 __pycache__/stringanswers3.cpython-35.pyc
 __pycache__/stringproblems3.cpython-35.pyc
 __pycache__/tester.cpython-35.pyc
+adventure/__pycache__/character.cpython-35.pyc
+adventure/__pycache__/enemy.cpython-35.pyc
+adventure/__pycache__/item.cpython-35.pyc
+adventure/__pycache__/player.cpython-35.pyc
+adventure/__pycache__/potion.cpython-35.pyc
