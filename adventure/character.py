@@ -19,7 +19,7 @@ class Character:
 		damage = min(self.level - other.level + 2, 1)
 		print(self.name + "'s attack deals " + str(damage) + " damage!")
 		other.hp = other.hp - damage
-		print(other.name + " is now at " + str(other.hp) + "/" + str(other.maxhp) + "hp")
+		print(other.name + " is now at " + str(other.hp) + "/" + str(other.maxhp) + "HP.")
 
 	def is_dead(self):
 		return self.hp <= 0

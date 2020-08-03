@@ -28,6 +28,7 @@ def handle_input(line):
 		print("  status: Displays your current status")
 		print("  inventory: Displays the items in your inventory")
 		print("  use-item <item_number>: Uses an item")
+		print("  explore: Look for adventure!")
 	elif parts[0] == "status":
 		p.print_status()
 	elif parts[0] == "inventory":
@@ -55,6 +56,7 @@ def handle_input(line):
 			print("What will you do?")
 			print("0. Fight")
 			print("1. Run")
+			print(">", end=" ")
 			l = input()
 			try:
 				if l == "0":
@@ -62,7 +64,7 @@ def handle_input(line):
 					if p.battle_opponent.is_dead():
 						print("You win!")
 						p.level_up()
-						print("Level up! You are now level " + str(p.level))
+						print("Level up! You are now level " + str(p.level) + ".")
 						p.set_battle_opponent(None)
 						break
 					p.battle_opponent.attack(p)
